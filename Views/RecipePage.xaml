@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UseItUp.Views.RecipePage"
+             Title="菜谱推荐">
+
+    <VerticalStackLayout VerticalOptions="Center">
+        <Label Text="这是菜谱推荐页面 (建设中...)" HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>

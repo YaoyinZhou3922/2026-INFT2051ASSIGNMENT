@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UseItUp.Views.AddIngredientPage"
+             Title="Add New Item">
+
+	<VerticalStackLayout Spacing="20" Padding="20">
+
+		<Label Text="Ingredient Name" FontAttributes="Bold" FontSize="16" />
+		<Entry x:Name="NameEntry" Placeholder="e.g., Milk, Apple, Chicken" />
+
+		<Label Text="Quantity" FontAttributes="Bold" FontSize="16" />
+		<Entry x:Name="QuantityEntry" Placeholder="e.g., 1, 2, 5" Keyboard="Numeric" />
+
+		<Label Text="Expiry Date" FontAttributes="Bold" FontSize="16" />
+		<DatePicker x:Name="ExpiryDatePicker" />
+
+		<Button Text="Save to Inventory"
+                Clicked="OnSaveClicked"
+                BackgroundColor="#2b0b98"
+                TextColor="White"
+                Margin="0,30,0,0"
+                HeightRequest="50"
+                CornerRadius="8"/>
+
+	</VerticalStackLayout>
+
+</ContentPage>
