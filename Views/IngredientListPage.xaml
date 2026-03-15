@@ -6,86 +6,86 @@
              Title="My Inventory"
              BackgroundColor="#F4F6F8">
 
-	<ContentPage.ToolbarItems>
+<ContentPage.ToolbarItems>
 		<ToolbarItem Text="Add (+)" Clicked="OnAddIngredientClicked" />
-	</ContentPage.ToolbarItems>
+</ContentPage.ToolbarItems>
 
-	<Grid Padding="16,20">
+<Grid Padding="16,20">
 
-		<CollectionView x:Name="IngredientsList"
+	<CollectionView x:Name="IngredientsList"
                         SelectionMode="None">
 
-			<CollectionView.ItemTemplate>
-				<DataTemplate x:DataType="models:Ingredient">
+		<CollectionView.ItemTemplate>
+			<DataTemplate x:DataType="models:Ingredient">
 
-					<Border Margin="0,0,0,12"
-                            Padding="16"
-                            BackgroundColor="White"
-                            Stroke="#E5E7EB"
-                            StrokeThickness="1"
-                            StrokeShape="RoundRectangle 12">
+				<Border Margin="0,0,0,12"
+                           Padding="16"
+                           BackgroundColor="White"
+                           Stroke="#E5E7EB"
+                           StrokeThickness="1"
+                           StrokeShape="RoundRectangle 12">
 
-						<Border.Shadow>
-							<Shadow Brush="#000000" Opacity="0.05" Radius="4" Offset="0,2" />
-						</Border.Shadow>
+				<Border.Shadow>
+					<Shadow Brush="#000000" Opacity="0.05" Radius="4" Offset="0,2" />
+				</Border.Shadow>
 
-						<Grid ColumnDefinitions="*, Auto, Auto" ColumnSpacing="15" VerticalOptions="Center">
+					<Grid ColumnDefinitions="*, Auto, Auto" ColumnSpacing="15" VerticalOptions="Center">
 
-							<VerticalStackLayout Grid.Column="0" VerticalOptions="Center" Spacing="4">
-								<Label Text="{Binding Name}"
+						<VerticalStackLayout Grid.Column="0" VerticalOptions="Center" Spacing="4">
+							<Label Text="{Binding Name}"
                                        FontSize="18"
                                        FontAttributes="Bold"
                                        TextColor="#1F2937"
                                        LineBreakMode="TailTruncation" />
 
-								<Label Text="{Binding ExpiryDate, StringFormat='Expires: {0:MMM dd, yyyy}'}"
+							<Label Text="{Binding ExpiryDate, StringFormat='Expires: {0:MMM dd, yyyy}'}"
                                        TextColor="#EF4444"
                                        FontSize="13"
                                        FontAttributes="Italic"/>
-							</VerticalStackLayout>
+						</VerticalStackLayout>
 
-							<Border Grid.Column="1"
+						<Border Grid.Column="1"
                                     BackgroundColor="#EEF2FF"
                                     StrokeThickness="0"
                                     StrokeShape="RoundRectangle 8"
                                     Padding="10,6"
                                     VerticalOptions="Center">
 
-								<Label Text="{Binding Quantity, StringFormat='Qty: {0}'}"
-                                       FontSize="13"
-                                       FontAttributes="Bold"
-                                       TextColor="#4F46E5" />
-							</Border>
+							<Label Text="{Binding Quantity, StringFormat='Qty: {0}'}"
+                                      FontSize="13"
+                                      FontAttributes="Bold"
+                                      TextColor="#4F46E5" />
+						</Border>
 
-							<Button Grid.Column="2"
-                                    Text="✕"
-                                    FontSize="18"
-                                    FontAttributes="Bold"
-                                    TextColor="#9CA3AF"
-                                    BackgroundColor="Transparent"
-                                    Padding="10"
-                                    VerticalOptions="Center"
-                                    Clicked="OnDeleteIngredientClicked" />
-						</Grid>
-					</Border>
-				</DataTemplate>
-			</CollectionView.ItemTemplate>
+						<Button Grid.Column="2"
+                                   Text="✕"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#9CA3AF"
+                                   BackgroundColor="Transparent"
+                                   Padding="10"
+                                   VerticalOptions="Center"
+                                   Clicked="OnDeleteIngredientClicked" />
+					</Grid>
+				</Border>
+			</DataTemplate>
+		</CollectionView.ItemTemplate>
 
-			<CollectionView.EmptyView>
-				<VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="16" Margin="0,100,0,0">
-					<Label Text="🛒" FontSize="64" HorizontalOptions="Center" />
-					<Label Text="Your inventory is empty."
-                           FontSize="18"
-                           FontAttributes="Bold"
-                           TextColor="#4B5563"
-                           HorizontalOptions="Center" />
-					<Label Text="Tap the 'Add (+)' button to restock!"
-                           FontSize="14"
-                           TextColor="#6B7280"
-                           HorizontalOptions="Center" />
-				</VerticalStackLayout>
-			</CollectionView.EmptyView>
+		<CollectionView.EmptyView>
+			<VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="16" Margin="0,100,0,0">
+				<Label Text="🛒" FontSize="64" HorizontalOptions="Center" />
+				<Label Text="Your inventory is empty."
+                          FontSize="18"
+                          FontAttributes="Bold"
+                          TextColor="#4B5563"
+                          HorizontalOptions="Center" />
+				<Label Text="Tap the 'Add (+)' button to restock!"
+                          FontSize="14"
+                          TextColor="#6B7280"
+                          HorizontalOptions="Center" />
+			</VerticalStackLayout>
+		</CollectionView.EmptyView>
 
-		</CollectionView>
-	</Grid>
+	</CollectionView>
+</Grid>
 </ContentPage>

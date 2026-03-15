@@ -20,10 +20,10 @@ namespace UseItUp.Views
         // 保存逻辑：点击底部 Save 按钮时触发
         private async void OnSaveClicked(object sender, EventArgs e)
         {
-            // 1. 表单验证：名字不能为空
+            // 1. Basic input validation: Name cannot be empty
             if (string.IsNullOrWhiteSpace(NameEntry.Text))
             {
-                await DisplayAlert("提示", "请输入食材名称。", "好的");
+                await DisplayAlert("Required", "Please enter an ingredient name.", "OK");
                 return;
             }
 
